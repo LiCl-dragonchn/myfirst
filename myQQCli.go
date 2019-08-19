@@ -29,7 +29,7 @@ func main() {
 	fmt.Scanln(&nickname)
 	fmt.Println("你的昵称是:", nickname)
 
-	TcpAdd, _ := net.ResolveTCPAddr("tcp", "172.16.2.83:8080")
+	TcpAdd, _ := net.ResolveTCPAddr("tcp", "127.0.0.1:8080")
 	conn, err := net.DialTCP("tcp", nil, TcpAdd)
 	if err != nil {
 		fmt.Println("无法连接到服务器。。。")

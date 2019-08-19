@@ -45,7 +45,7 @@ func say(tcpConn *net.TCPConn, nickname string) {
 func main() {
 	fmt.Println("服务器开机。。。")
 	//---------------------------------------//
-	tcpAddr, _ := net.ResolveTCPAddr("tcp", "172.16.2.83:8080")
+	tcpAddr, _ := net.ResolveTCPAddr("tcp", "127.0.0.1:8080")
 	fmt.Println("开启监听连接请求。。。")
 	tcpListen, _ := net.ListenTCP("tcp", tcpAddr)
 	ConnMap = make(map[string]*net.TCPConn)
